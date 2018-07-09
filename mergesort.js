@@ -10,16 +10,16 @@ function mergeSort(arr) {
     return arr;
   }
 
-  var midpoint = Math.floor(arr.length / 2);
-  var leftArray = arr.slice(0, midpoint);
-  var rightArray = arr.slice(midpoint);
+  let midpoint = Math.floor(arr.length / 2);
+  let leftArray = arr.slice(0, midpoint);
+  let rightArray = arr.slice(midpoint);
 
 
-  var newLeft = mergeSort(leftArray);
-  var newRight = mergeSort(rightArray);
+  let newLeft = mergeSort(leftArray);
+  let newRight = mergeSort(rightArray);
 
 
-  var sortedArr = [];
+  let sortedArr = [];
 
   while (newLeft.length > 0 || newRight.length > 0) {
     if (newLeft[0] < newRight[0] || newRight[0] === undefined) {
