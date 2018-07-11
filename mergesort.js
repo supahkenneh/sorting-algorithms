@@ -22,7 +22,7 @@ function mergeSort(arr) {
   let sortedArr = [];
 
   while (newLeft.length > 0 || newRight.length > 0) {
-    if (newLeft[0] < newRight[0] || newRight[0] === undefined) {
+    if (newLeft[0] <= newRight[0] || newRight[0] === undefined) {
       sortedArr.push(newLeft.shift());
     } else {
       sortedArr.push(newRight.shift());
@@ -32,4 +32,22 @@ function mergeSort(arr) {
   return sortedArr;
 }
 
-console.log(mergeSort(unsorted));
+let sorted = mergeSort(unsorted);
+console.log(sorted);
+
+
+
+// function merge (left, right) {
+//   var sorted = [];
+//   while ((left.length + right.length) > 0 ){
+//     if (!left[0]) {
+//       sorted.push(right.shift());
+//     }
+//     else if (!right[0]){
+//       sorted.push(left.shift());
+//     }
+//     else if (left[0] < right[0]){
+//       sorted.push
+//     }
+//   }
+// }
